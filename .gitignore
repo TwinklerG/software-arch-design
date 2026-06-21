@@ -1,0 +1,12 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+uv.lock
+
+# MkDocs output
+site/
+
+# IDE
+.vscode/
+.idea/

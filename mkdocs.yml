@@ -1,0 +1,70 @@
+site_name: 南京大学《软件系统设计》期末复习
+site_description: 南京大学软件学院《软件系统设计》课程期末考试复习资料——涵盖设计模式与软件架构两大板块，整理自历年考题及课件
+site_author: 南京大学软件学院
+site_url: https://twinklerg.github.io/software-arch-design/
+
+docs_dir: src
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换至暗色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至亮色模式
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 首页: index.md
+  - 历年考题:
+      - 2015 年: 2015.md
+      - 2016 年: 2016.md
+      - 2017 年: 2017.md
+      - 2018 年: 2018.md
+      - 2019 年: 2019.md
+      - 2021 年: 2021.md
+      - 2022 年: 2022.md
+      - 2024 年: 2024.md
+      - 2025 年: 2025.md
+  - 课件索引: slides.md
