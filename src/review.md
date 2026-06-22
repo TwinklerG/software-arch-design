@@ -58,23 +58,18 @@
 
 ### 2.5 架构活动与过程
 
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│  Specifying  │    │ Architecture │    │ Documenting │    │ Architecture │
-│    ASRs      │───▶│   Design     │───▶│   Views     │───▶│  Evaluation  │
-│  (识别ASR)   │    │  (架构设计)    │    │  (文档化)    │    │   (评估)     │
-└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
-       ▲                                                       │
-       │                   Requirements,                       │
-       └─────────────────── constraints,                       │
-                           Stakeholders                        │
-```
+![arch-process](review.assets/arch-process.png)
 
-核心过程：
-1. **指定 ASRs**：从需求、约束、利益相关者中识别架构攸关需求
-2. **架构设计**：使用模式和战术（Patterns and Tactics）生成候选视图草图，由模式决定结构
-3. **架构文档化**：选取、组合视图，加上视图之外的文档（beyond views）
-4. **架构评估**：使用优先级排序的质量属性场景进行验证
+软件架构过程包含四个主要活动，按顺序执行并形成反馈闭环：
+
+| 步骤 | 活动 | 主要输入 | 主要输出 |
+|------|------|---------|---------|
+| **1** | **Specifying ASRs**（识别架构攸关需求） | Requirements（需求）、Constraints（约束）、Stakeholders（利益相关者） | Prioritized Quality Attribute Scenarios（优先级排序的质量属性场景） |
+| **2** | **Architecture Design**（架构设计） | Prioritized Quality Attribute Scenarios + Patterns and Tactics（模式与战术） | "Sketches" of candidate views, determined by patterns（候选视图草图，由模式决定结构） |
+| **3** | **Documenting**（架构文档化） | Candidate views（候选视图） | Chosen, combined views plus documentation beyond views（选取并组合的视图 + 视图之外的文档） |
+| **4** | **Architecture Evaluation**（架构评估） | Documented architecture（已文档化的架构） | Evaluation results → 反馈至 ASRs / Design（评估结果，反馈至步骤 1/2 以迭代改进） |
+
+> **流程特点**：四个活动形成迭代闭环——评估结果反馈到 ASRs 识别和设计阶段，当架构不满足 ASR 时回退调整；同时需求和约束可能随业务变化持续输入。
 
 ---
 
