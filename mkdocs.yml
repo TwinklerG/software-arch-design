@@ -38,7 +38,11 @@ theme:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -59,6 +63,7 @@ nav:
   - 首页: index.md
   - 必背要点: recite.md
   - 课程复习: review.md
+  - 设计模式速查: design-pattern.md
   - 历年考题:
       - 2015 年: 2015.md
       - 2016 年: 2016.md
