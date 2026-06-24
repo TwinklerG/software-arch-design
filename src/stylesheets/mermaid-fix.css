@@ -1,0 +1,28 @@
+/* Fix Mermaid class diagram: ensure hollow triangle markers render correctly */
+/* Applies to extension (inheritance) and composition markers */
+
+/* Extension marker — the hollow triangle used for inheritance/realization */
+[id*="extensionStart"] polygon,
+[id*="extensionEnd"] polygon,
+[id*="extensionStart"] path:first-of-type,
+[id*="extensionEnd"] path:first-of-type,
+marker[id*="extension"] polygon,
+marker[id*="extension"] path:first-of-type {
+  fill: var(--md-default-bg-color, #ffffff) !important;
+  stroke: inherit !important;
+}
+
+/* Composition marker — the filled diamond */
+[id*="compositionStart"] polygon,
+[id*="compositionEnd"] polygon,
+marker[id*="composition"] polygon {
+  fill: var(--md-default-fg-color, #000000) !important;
+}
+
+/* Dark mode support */
+[data-md-color-scheme="slate"] [id*="extensionStart"] polygon,
+[data-md-color-scheme="slate"] [id*="extensionEnd"] polygon,
+[data-md-color-scheme="slate"] [id*="extensionStart"] path:first-of-type,
+[data-md-color-scheme="slate"] [id*="extensionEnd"] path:first-of-type {
+  fill: var(--md-default-bg-color, #1e1e1e) !important;
+}
